@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/main_page_toolbar"
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/items"
+            android:layout_marginBottom="150dp"
+            android:background="#353745"
+            />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#353745"
+        android:layout_alignParentBottom="true"
+        tools:ignore="UnknownId">
+
+        <Button
+            android:id="@+id/playbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:textSize="20sp"
+            android:background="@drawable/ic_baseline_pause_circle_filled_24"/>
+
+        <Button
+            android:id="@+id/forbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@id/playbtn"
+            android:textSize="20sp"
+            android:background="@drawable/ic_baseline_fast_forward_24"/>
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/playbtn"
+            android:textSize="20sp"
+            android:background="@drawable/ic_baseline_fast_rewind_24"/>
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="1.5x"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#808080"
+            android:layout_alignParentRight="true"
+            />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="35dp" />
+        <TextView
+            android:id="@+id/coun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="0:00"
+            android:textColor="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="0:00"
+            android:textColor="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
